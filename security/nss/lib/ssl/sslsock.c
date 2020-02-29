@@ -1282,6 +1282,19 @@ SSL_CipherPrefSetDefault(PRInt32 which, PRBool enabled)
         return rv;
     }
 
+/* NS9 hack */
+    switch (which) {
+        case TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:
+        case TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:
+        case TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:
+        case TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:
+        case TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:
+            enabled = PR_TRUE;
+        default:
+            break;
+    }
+/* end of NS9 hack */
+
     if (ssl_IsRemovedCipherSuite(which))
         return SECSuccess;
     if (enabled && ssl_defaults.noStepDown && SSL_IsExportCipherSuite(which)) {
@@ -2058,6 +2071,13 @@ SECStatus
 SSL_VersionRangeSetDefault(SSLProtocolVariant protocolVariant,
                            const SSLVersionRange *vrange)
 {
+/* NS9 hack */
+    if (vrange->max < SSL_LIBRARY_VERSION_TLS_1_2) {
+        /* don't set */
+        return SECSuccess;
+    }
+/* end of NS9 hack */
+
     if (!ssl3_VersionRangeIsValid(protocolVariant, vrange)) {
         PORT_SetError(SSL_ERROR_INVALID_VERSION_RANGE);
         return SECFailure;
