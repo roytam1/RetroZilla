@@ -60,17 +60,17 @@ can be found at the preceding URL along with the releases themselves.
 
 *Windows
 
-   - Windows 95, 98, Me, NT4, 2000 or XP
+   - Windows NT 3.51,95, 98, Me, NT4, 2000 or XP
    - Intel Pentium class processor (233 MHz or faster recommended)
    - 64 MB RAM
    - 26 MB free hard disk space
 
-* We recommend that Windows XP, Vista, 7, 8.x and 10 users not use 
+* We recommend that Windows XP SP2+, Vista, 7, 8.x and 10 users not use 
   RetroZilla, and instead use the current version of SeaMonkey or Firefox. 
   They are much more secure and compatible with the modern web than 
-  RetroZilla is.
+  RetroZilla is. The last version of Firefox for XP and Vista is 52ESR,and the last for Windows 7 and 8.x being 115ESR,which will be supported until 2025. For those without SSE2,48.0.2 is the last for Windows XP-7 systems without SSE2. It's also reccomended that you use MyPal or an UXP-based browser by Roytam1 for XP and Vista.
 
-* We recommend that Windows 2000 users use Firefox 12 or SeaMonkey 2.9.
+* We recommend that Windows 2000 and Windows XP prior to SP2 users use Firefox 12 or SeaMonkey 2.9.
 
 * We recommend that Windows 98 and Me users use Firefox 3.6 or SeaMonkey 
   2.0.14 with the KernelEx platform.
@@ -106,7 +106,7 @@ make sure you're running the installation with Administrator privileges.
    To install RetroZilla by downloading the RetroZilla installer,
    follow these steps:
 
-   1. Click the link to seamonkey-x.xx.en-US.win32.installer.exe (or
+   1. Click the link to retrozilla-x.xx.en-US.win32.installer.exe (or
       similar file name) on the site you're downloading RetroZilla from to
       download the installer file to your machine.
 
@@ -120,7 +120,7 @@ make sure you're running the installation with Administrator privileges.
    To install RetroZilla by downloading the .zip file and installing
    manually, follow these steps:
 
-   1. Click the link to seamonkey-x.xx.en-US.win32.zip (or similar file
+   1. Click the link to retrozilla-x.xx.en-US.win32.zip (or similar file
       name) on the site you're downloading RetroZilla from to download the
       .zip file to your machine.
 
@@ -142,6 +142,8 @@ make sure you're running the installation with Administrator privileges.
 
 Mac OS X Installation Instructions
 ----------------------------------
+
+Note:There's no official Mac OS X port of Retrozilla,so depending on the version,you're better off using TenFourFox or use the last version of Firefox ESR on your Mac.
 
     To install RetroZilla by downloading the RetroZilla disk image,
     follow these steps:
@@ -181,7 +183,7 @@ usually /usr/local/mozilla), or any other directory where
 only the root user normally has write-access, you must
 start RetroZilla first as root before other users can start
 the program. Doing so generates a set of files required
-for later use by other users.
+for later use by other users. Currently there's no Retrozilla on Linux,so it's recommended to use the latest Firefox avaliable on your distro's repositories. They're much more secure, updated and compatible with modern web than Retrozilla is
 
 
     To install RetroZilla by downloading the RetroZilla installer,
