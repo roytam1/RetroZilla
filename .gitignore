@@ -8,6 +8,11 @@ mozconfig
 mozconfig-browser
 mozconfig-suite
 
+xpinstall/packager/win_gre/config.ini
+xpinstall/packager/windows/config.ini
+
+
+
 ### Windows ###
 # Windows image file caches
 Thumbs.db

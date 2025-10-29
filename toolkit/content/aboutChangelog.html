@@ -13,7 +13,37 @@
 		<img src="about:logopng" id="rzLogo">
 		<!--<img src="https://www.mozilla.org/images/logo-star.gif" id="rzLogo">-->
 		<!-- current release -->
-		<h1>RetroZilla 2.2</h1>
+		<h1>RetroZilla 2.3</h1>
+		<h3>New Features</h3>
+		<ul>
+			<li>Updated certificate store</li>
+			<li>Updated NSS with TLS 1.3 support</li>
+			<li>Updated various internal libraries</li>
+			<li>Added about:debug page with links and information for RetroZilla developers</li>
+			<li>New Search Engines: DuckDuckGo Lite and Wiby</li>
+			<li>DuckDuckGo Lite set as default search engine</li>
+			<li>ChatZilla has been updated to 0.9.86.1</li>
+			<li>JavaScript: Add array.reduce and array.reduceRight</li>
+			<li>CSS: Add support for alpha colors</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>Website certified by an unknown authority dialog</li>
+			<li>Gecko build version in user agent string is updated to reflect modern conventions</li>
+			<li>Long-standing installer creation bug fixed</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			RetroZilla 2.3 brings together many of the community updates made since the last official 
+			release in 2019.
+		</p>
+		<p>
+			Since 2019, the web has changed a lot. Many websites load entirely using JavaScript (such as
+			Google search results), and therefore may not work in RetroZilla any more. Going forward, 
+			we will make our best attempt to adapt RetroZilla to work with this new reality.
+		</p>
+		<!-- past releases -->
+		<h2>RetroZilla 2.2</h2>
 		<h3>New Features</h3>
 		<ul>
 			<li>Updated NSS with TLS 1.2 support</li>
@@ -21,13 +51,18 @@
 			<li>Various security fixes</li>
 			<li>Various build system changes</li>
 			<li>RetroZilla Browser (Firefox) code added</li>
+			<li>Non-standard ports of gopher can now be accessed by toggling network.gopher.port-restricted in about:config</li>
+			<li>Typing search queries directly in the URLbar now supported</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>Website certified by an unknown authority dialog</li>
 		</ul>
 		<h3>Release Notes</h3>
 		<p>
-			This build was released to bring TLS 1.2 support to users without having
-			them wait until the Gecko code is done being worked on.
+			This build was released primarily to bring TLS 1.2 support to users as well as fix the annoying
+			root certificate problem.
 		</p>
-		<!-- past releases -->
 		<hr>
 		<h2>RetroZilla 2.1</h2>
 		<h3>New Features</h3>

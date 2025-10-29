@@ -520,7 +520,7 @@ CSSParserImpl::CSSParserImpl()
     mSVGMode(PR_FALSE),
 #endif
     mHTMLMediaMode(PR_FALSE),
-    mHandleAlphaColors(PR_FALSE),
+    mHandleAlphaColors(PR_TRUE),
     mCaseSensitive(PR_FALSE),
     mParsingCompoundProperty(PR_FALSE)
 #ifdef DEBUG
@@ -1034,6 +1034,7 @@ CSSParserImpl::ParseColorString(const nsSubstring& aBuffer,
   if (NS_FAILED(rv))
     return rv;
 
+  PRBool origHandleAlphaColors = mHandleAlphaColors;
   mHandleAlphaColors = aHandleAlphaColors;
 
   nsCSSValue value;
@@ -1042,7 +1043,7 @@ CSSParserImpl::ParseColorString(const nsSubstring& aBuffer,
   CLEAR_ERROR();
   ReleaseScanner();
 
-  mHandleAlphaColors = PR_FALSE;
+  mHandleAlphaColors = origHandleAlphaColors;
 
   if (!colorParsed) {
     return NS_ERROR_FAILURE;

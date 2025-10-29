@@ -24,6 +24,8 @@ toolkit.jar:
         content/global/aboutCredits.css             (resources/content/aboutCredits.css) 
         content/global/aboutChangelog.html          (resources/content/aboutChangelog.html) 
         content/global/aboutChangelog.css           (resources/content/aboutChangelog.css) 
+        content/global/aboutDebug.html              (resources/content/aboutDebug.html)  
+        content/global/aboutDebug.js                (resources/content/aboutDebug.js)  
         content/global/aboutHome.html               (resources/content/aboutHome.html) 
         content/global/aboutHome.css                (resources/content/aboutHome.css) 
         content/global/aboutHome.js                 (resources/content/aboutHome.js) 

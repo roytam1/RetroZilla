@@ -47,14 +47,14 @@ PACKAGE_FILE = searchplugins.pkg
 
 ifndef MOZ_PHOENIX
 FILES		= \
-	dmoz.gif            \
-	dmoz.src            \
 	google.gif          \
 	google.src          \
 	jeeves.gif          \
 	jeeves.src          \
-	startpage.png       \
-	startpage.src       \
+	ddg-lite.png        \
+	ddg-lite.src        \
+        wiby.gif            \
+	wiby.src            \
 	$(NULL)
 endif
 

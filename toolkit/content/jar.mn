@@ -21,6 +21,8 @@ toolkit.jar:
 *+ content/global/inlineSpellCheckUI.js       (inlineSpellCheckUI.js)
 +  content/global/mozilla.xhtml               (mozilla.xhtml)
 +  content/global/retrozilla.xhtml            (retrozilla.xhtml)
++  content/global/aboutDebug.html             (aboutDebug.html)
++  content/global/aboutDebug.js               (aboutDebug.js)
 +  content/global/aboutCredits.html           (aboutCredits.html)
 +  content/global/credits/credits.css         (aboutCredits.css)
 +  content/global/nsTransferable.js           (nsTransferable.js)

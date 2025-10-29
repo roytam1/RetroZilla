@@ -1293,6 +1293,7 @@ nsScriptSecurityManager::GetBaseURIScheme(nsIURI* aURI,
             path.EqualsLiteral("mozilla") ||
             path.EqualsLiteral("changelog") ||
             path.EqualsLiteral("retrozilla") ||
+            path.EqualsLiteral("debug") ||
             path.EqualsLiteral("logo")    ||
             path.EqualsLiteral("logopng")    ||
             path.EqualsLiteral("license") ||

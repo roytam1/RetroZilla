@@ -18,8 +18,9 @@ if(prefServiceBranch.getPrefType('rzHome.customsearch')){
 	//key exist!
 	var searchEngineURL = prefs.getCharPref("rzHome.customsearch");
 } else {
-	// use Google
-	var searchEngineURL = "http://www.google.com/search?q=";
+	// use DuckDuckGo Lite for now because Google does not want to play nice
+	searchEngineURL = "https://duckduckgo.com/lite/?q=";
+	//var searchEngineURL = "http://www.google.com/search?q=";
 }
 
 // autofocus function

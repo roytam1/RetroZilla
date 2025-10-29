@@ -73,7 +73,8 @@ static RedirEntry kRedirMap[] = {
     { "license", "chrome://global/content/license.html", PR_TRUE },
     { "licence", "chrome://global/content/license.html", PR_TRUE },
     { "about", "chrome://global/content/aboutAbout.html", PR_FALSE },
-    { "neterror", "chrome://global/content/netError.xhtml", PR_TRUE }
+    { "neterror", "chrome://global/content/netError.xhtml", PR_TRUE },
+    { "debug", "chrome://global/content/aboutDebug.html", PR_TRUE },
 };
 static const int kRedirTotal = NS_ARRAY_LENGTH(kRedirMap);
 

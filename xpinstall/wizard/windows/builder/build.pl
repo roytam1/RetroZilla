@@ -58,9 +58,29 @@ use File::Basename;
 
 $DEPTH         = "../../../..";
 $topsrcdir     = GetTopSrcDir();
+
+# RZ: determine object directory
+# WARNING: this is the extent of my perl knowledge
+# Fixes long-standing installer creation bug
+$cd = getcwd;
+my @parts = split('/', $cd);
+my @dept = split('/', $DEPTH);
+$c = scalar(@parts) - scalar(@dept);
+$i = 0;
+$str = "";
+while ($i < $c) {
+	$str = "$str/@parts[$i]";
+	$i = $i + 1;
+}
+$str =~ s#//#/#g;
+$topobjdir = "$str";
+
 # ensure that Packager.pm is in @INC, since we might not be called from
 # mozilla/xpinstall/packager
-push(@INC, "$topsrcdir/../mozilla/xpinstall/packager");
+# line below is "<source dir>/xpinstall/packager"
+# rz: compromise for src dirs not named mozilla
+push(@INC, "$topsrcdir/xpinstall/packager");
+#push(@INC, "/c/projects/moz95/mozilla/xpinstall/packager");
 require StageUtils;
 
 ParseArgv(@ARGV);
@@ -73,6 +93,7 @@ $inDistPath       = "$topobjdir/dist"            if !defined($inDistPath);
 $cwdBuilder       = "$topsrcdir/xpinstall/wizard/windows/builder";
 $gDistInstallPath = "$inDistPath/install";
 $gPackagerPath    = "$topsrcdir/xpinstall/packager";
+
 
 if(defined($ENV{DEBUG_INSTALLER_BUILD}))
 {
@@ -277,4 +298,3 @@ sub GetTopSrcDir
   chdir($savedCwdDir);
   return($rootDir);
 }
-
